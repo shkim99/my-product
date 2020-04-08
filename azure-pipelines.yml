@@ -14,7 +14,7 @@ variables:
   # containerRegistryDockerConnection: 'acr'
   # environment: 'aks.default'
 - name: imageRepository
-  value: 'products'
+  value: 'product'
 - name: dockerfilePath
   value: '**/Dockerfile'
 - name: tag
@@ -26,6 +26,7 @@ variables:
   value: $(Pipeline.Workspace)/.m2/repository
 - name: MAVEN_OPTS
   value: '-Dmaven.repo.local=$(MAVEN_CACHE_FOLDER)'
+
 
 
 stages:
